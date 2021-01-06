@@ -2,12 +2,12 @@
 ### Some useful Docker commands I've used in my studies
 
 ## Summary
-### [0. Used flags]
-### [1. General commands]
-### [2. Container commands]
-### [3. Image commands]
-### [4. Commands that need to be reviewd and added]
-### [5. Useful links]
+### [0. Used flags](https://github.com/oidani/docker-cheat-sheet/blob/master/README_en.md#0-used-flags-1)
+### [1. General commands](https://github.com/oidani/docker-cheat-sheet/blob/master/README_en.md#1-general-commands-1)
+### [2. Container commands](https://github.com/oidani/docker-cheat-sheet/blob/master/README_en.md#2-container-commands-1)
+### [3. Image commands](https://github.com/oidani/docker-cheat-sheet/blob/master/README_en.md#3-image-commands-1)
+### [4. Commands that need to be reviewd and added](https://github.com/oidani/docker-cheat-sheet/blob/master/README_en.md#4-commands-that-need-to-be-reviewd-and-added-1)
+### [5. Useful links](https://github.com/oidani/docker-cheat-sheet/blob/master/README_en.md#5-useful-links-1)
 
 #
 
@@ -116,4 +116,4 @@ _OBS: a dangling image is a layer that is not associated with any tagged image. 
 
 ## 5. Useful links:
 
-[https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes]
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
