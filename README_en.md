@@ -1,37 +1,49 @@
-### Remove all unused or dangling resources
+### - Remove all unused or dangling resources
 _OBS: a dangling resource is a image, container, volume, and network that is not associated with a container._
 
 `docker system prune [-a]`
 
 _[-a] Remove all of the above plus stopped containers and all unused images_
 
-### List all docker images with their associated IDs
-docker images -a
+### - List all docker images with their associated IDs
 
-### Remove image
-docker rmi [-f] image
-[-f] Force removal
+`docker images -a`
 
-### Remove dangling images
-OBS: a dangling image is a layer that is not associated with any tagged image. Located them with the filter option [-f dangling=true]
-docker images -f dangling=true
-docker image prune
+### - Remove image
 
-### List all images that match a pattern
+`docker rmi [-f] image`
+
+_[-f] Force removal_
+
+### - Remove dangling images
+_OBS: a dangling image is a layer that is not associated with any tagged image. Located them with the filter option [-f dangling=true]_
+
+`docker images -f dangling=true`
+`docker image prune`
+
+### - List all images that match a pattern
 - Linux
-docker images -a |  grep "pattern"
+
+`docker images -a |  grep "pattern"`
+
 - Windows (CMD)
-docker images -a |  findstr "pattern"
+
+`docker images -a |  findstr "pattern"`
+
 - Windows (PowerShell)
-docker images -a |  Select-String "pattern"
 
-### Remove all images that match a pattern
+`docker images -a |  Select-String "pattern"`
+
+### - Remove all images that match a pattern
 - Linux
-docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
 
-### Remove all images
-docker rmi $(docker images -aq)
-[-q] Shows only image ID (in this special case, all image IDs will be passed to docker rmi)
+`docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi`
+
+### - Remove all images
+
+`docker rmi $(docker images -aq)`
+
+_[-q] Shows only image ID (in this special case, all image IDs will be passed to docker rmi)_
 
 docker build
 docker image ls [-a]
