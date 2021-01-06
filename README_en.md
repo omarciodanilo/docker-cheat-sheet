@@ -3,7 +3,7 @@
 
 ## 1. General commands
 
-### Verify Docker brief resource utilization: total space used by images, containers, local volume, and cache
+### - Verify Docker brief resource utilization: total space used by images, containers, local volume, and cache
 `docker system df`
 
 ### - Remove all unused or dangling resources
@@ -15,10 +15,22 @@ _[-a] Remove all of the above plus stopped containers and all unused images_
 
 ## 2. Container commands
 
-### Verify size of each running container
+### - List containers
+
+`docker container ls [-a]`
+
+_[-a] List running and stopped containers_
+
+### - Remove containers
+
+`docker container rm [-f] [container-id or container-name]`
+
+_[-f] Force removal_
+
+### - Verify size of each running container
 `docker ps --size`
 
-### Verify size of all containers
+### - Verify size of all containers
 `docker ps -a --size`
 
 ## 3. Image commands
@@ -63,7 +75,7 @@ _OBS: a dangling image is a layer that is not associated with any tagged image. 
 
 _[-q] Shows only image ID (in this special case, all image IDs will be passed to docker rmi)_
 
-### Remove all images not related to any container
+### - Remove all images not related to any container
 
 `docker image prune -af`
 
@@ -72,19 +84,17 @@ _[-f] Force removal_
 
 ## 4. Commands that need to be reviewd and added
 
-`docker build"`
+`docker build`
 
 `docker image ls [-a]`
 
 `docker image rm [-f]`
 
-`docker container ls [-a]`
-
-`docker container rm [-f]`
-
 `docker container exec [-it]`
 
 `docker container run`
+
+`docker container start|stop|restart`
 
 `docker ps [-a]`
 
