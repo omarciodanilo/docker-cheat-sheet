@@ -1,6 +1,16 @@
 # Docker Cheat-Sheet
 ### Some useful Docker commands I've used in my studies
 
+## Summary
+### [0. Used flags]
+### [1. General commands]
+### [2. Container commands]
+### [3. Image commands]
+### [4. Commands that need to be reviewd and added]
+### [5. Useful links]
+
+#
+
 ## 0. Used flags
 
 [-a] All running, stopped, and unused containers or images
@@ -36,8 +46,6 @@ _OBS: a dangling resource is a image, container, volume, and network that is not
 ### - Verify size of all containers
 
 `docker ps -a --size`
-
-_[-a] All containers_
 
 ## 3. Image commands
 
@@ -106,6 +114,6 @@ _OBS: a dangling image is a layer that is not associated with any tagged image. 
 
 `docker push new-repo:tagname`
 
-### Useful links:
+## 5. Useful links:
 
 [https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes]
