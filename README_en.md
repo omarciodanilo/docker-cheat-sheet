@@ -1,9 +1,27 @@
+# Docker Cheat-Sheet
+### Some useful Docker commands I've used in my studies
+
+## 1. General commands
+
+### Verify Docker brief resource utilization: total space used by images, containers, local volume, and cache
+`docker system df`
+
 ### - Remove all unused or dangling resources
 _OBS: a dangling resource is a image, container, volume, and network that is not associated with a container._
 
 `docker system prune [-a]`
 
 _[-a] Remove all of the above plus stopped containers and all unused images_
+
+## 2. Container commands
+
+### Verify size of each running container
+`docker ps --size`
+
+### Verify size of all containers
+`docker ps -a --size`
+
+## 3. Image commands
 
 ### - List all docker images with their associated IDs
 
@@ -45,31 +63,39 @@ _OBS: a dangling image is a layer that is not associated with any tagged image. 
 
 _[-q] Shows only image ID (in this special case, all image IDs will be passed to docker rmi)_
 
-docker build
-docker image ls [-a]
-docker image rm [-f]
-docker container ls [-a]
-docker container rm [-f]
-docker container exec [-it]
-docker container run
-docker ps [-a]
-docker login
-docker tag
-docker tag local-image:tagname new-repo:tagname
-docker push new-repo:tagname
+### Remove all images not related to any container
 
-verificar resumo do consumo do docker: tamanho total de imagens, containers, volume local, e cache
-docker system df
+`docker image prune -af`
 
-verificar tamanho de cada container em execução
-docker ps --size
+_[-a] All images_
+_[-f] Force removal_
 
-verificar tamanho de todos os containers
-docker ps -a --size
+## 4. Commands that need to be reviewd and added
 
-remover todas as imagens não vinculadas a containers
-docker image prune -af
+`docker build"`
 
-Links:
+`docker image ls [-a]`
 
-https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+`docker image rm [-f]`
+
+`docker container ls [-a]`
+
+`docker container rm [-f]`
+
+`docker container exec [-it]`
+
+`docker container run`
+
+`docker ps [-a]`
+
+`docker login`
+
+`docker tag`
+
+`docker tag local-image:tagname new-repo:tagname`
+
+`docker push new-repo:tagname`
+
+### Useful links:
+
+[https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes]
