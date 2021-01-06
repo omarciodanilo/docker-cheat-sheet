@@ -1,7 +1,9 @@
 ### Remove all unused or dangling resources
-OBS: a dangling resource is a image, container, volume, and network that is not associated with a container.
-docker system prune [-a]
-[-a] Remove all of the above plus stopped containers and all unused images
+_OBS: a dangling resource is a image, container, volume, and network that is not associated with a container._
+
+`docker system prune [-a]`
+
+_[-a] Remove all of the above plus stopped containers and all unused images_
 
 ### List all docker images with their associated IDs
 docker images -a
