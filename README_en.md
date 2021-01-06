@@ -1,6 +1,14 @@
 # Docker Cheat-Sheet
 ### Some useful Docker commands I've used in my studies
 
+## 0. Used flags
+
+[-a] All running, stopped, and unused containers or images
+
+[-f] Force related action
+
+[-q] Shows only container ID or image ID
+
 ## 1. General commands
 
 ### - Verify Docker brief resource utilization: total space used by images, containers, local volume, and cache
@@ -11,27 +19,25 @@ _OBS: a dangling resource is a image, container, volume, and network that is not
 
 `docker system prune [-a]`
 
-_[-a] Remove all of the above plus stopped containers and all unused images_
-
 ## 2. Container commands
 
 ### - List containers
 
 `docker container ls [-a]`
 
-_[-a] List running and stopped containers_
-
 ### - Remove containers
 
 `docker container rm [-f] [container-id or container-name]`
 
-_[-f] Force removal_
-
 ### - Verify size of each running container
+
 `docker ps --size`
 
 ### - Verify size of all containers
+
 `docker ps -a --size`
+
+_[-a] All containers_
 
 ## 3. Image commands
 
@@ -41,14 +47,13 @@ _[-f] Force removal_
 
 ### - Remove image
 
-`docker rmi [-f] image`
-
-_[-f] Force removal_
+`docker rmi [-f] [image-id or image-name]`
 
 ### - Remove dangling images
 _OBS: a dangling image is a layer that is not associated with any tagged image. Located them with the filter option [-f dangling=true]_
 
 `docker images -f dangling=true`
+
 `docker image prune`
 
 ### - List all images that match a pattern
@@ -73,14 +78,9 @@ _OBS: a dangling image is a layer that is not associated with any tagged image. 
 
 `docker rmi $(docker images -aq)`
 
-_[-q] Shows only image ID (in this special case, all image IDs will be passed to docker rmi)_
-
 ### - Remove all images not related to any container
 
 `docker image prune -af`
-
-_[-a] All images_
-_[-f] Force removal_
 
 ## 4. Commands that need to be reviewd and added
 
