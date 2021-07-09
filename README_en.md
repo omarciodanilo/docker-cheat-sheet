@@ -90,7 +90,7 @@ _OBS: a dangling image is a layer that is not associated with any tagged image. 
 
 `docker image prune -af`
 
-## 4. Commands that need to be reviewd and added
+## 4. Commands that need to be reviewed and added
 
 `docker build`
 
@@ -113,6 +113,50 @@ _OBS: a dangling image is a layer that is not associated with any tagged image. 
 `docker tag local-image:tagname new-repo:tagname`
 
 `docker push new-repo:tagname`
+
+quit container keeping it running
+
+`Ctrl + p + q`
+
+quit container stoping its execution
+
+`Ctrl + d`
+
+`exit`
+
+containers
+
+`docker run -it`
+
+`docker run -d`
+
+`docker pause`
+
+`docker unpause`
+
+`docker create`
+
+`docker attach`
+
+`docker stats`
+
+`docker top`
+
+`docker logs`
+
+`docker container prune`
+
+images
+
+`docker images`
+
+`docker image prune -a`
+
+containers and images
+
+`docker rm`
+
+`docker rm -f`
 
 ## 5. Useful links:
 
