@@ -146,6 +146,10 @@ containers
 
 `docker container prune`
 
+`docker update -m value -c value`
+
+`docker run -m value -c value`
+
 images
 
 `docker images`
